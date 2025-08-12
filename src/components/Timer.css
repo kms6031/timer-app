@@ -1,0 +1,40 @@
+.timer-container{
+    display :flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.timer-display{
+    font-size: 2em;
+    color:#333;
+}
+.timer-status{
+    font-size: 1em;
+    color: #8338EC;
+}
+.timer-status.running{
+    color: #38B6FF;
+}
+.timer-status.pause{
+    color: #E63946;
+}
+button{
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    color: #fff;
+
+}
+button.start{
+    background-color: #38B6FF;
+}
+button.pause{
+    background-color: #E63946;
+}
+button.reset{
+    background-color: #8338EC;
+}
