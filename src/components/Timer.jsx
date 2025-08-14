@@ -25,14 +25,14 @@ const Timer = () => {
             }, 1000)
         }
     }
-    const pauseTimer = () => {
-        if (status == '실행중') {
+    const pauseTimer=()=>{
+        if(status=='실행중'){
             clearInterval(intervalRef.current)
             setStatus('일시정지')
         }
     }
-
-    const resetTimer = () => {
+    
+    const resetTimer=()=>{
         clearInterval(intervalRef.current)
         setStatus('초기화')
         setTime(0)
@@ -45,19 +45,19 @@ const Timer = () => {
         { className: 'reset', value: '초기화', onClick: resetTimer },
     ]
     return (
+        
         <div className='timer-container'>
             <TimerDisplay time={formatTime(time)} status={status}/>
             <section>
-
-                {buttons.map((button, i) => (
-                    <Button
-                        key={i}
-                        className={button.className}
-                        onClick={button.onClick}
-                        value={button.value}
-                    />
-
-                ))}
+            {buttons.map((button, i) => (
+                <Button
+                key={i}
+                className={button.className}
+                onClick={button.onClick}
+                value={button.value}
+                />
+                
+            ))}
             </section>
         </div>
     )
